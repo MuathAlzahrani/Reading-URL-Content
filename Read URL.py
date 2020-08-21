@@ -1,7 +1,8 @@
-  import requests
+import requests
 
-r = requests.get('https://twitter.com/', timeout=0.5)
+r = requests.get('https://s-m.com.sa/')
 
-print(r.content)
-print(r.status_code)
-print(r.headers)
+print(r.text)
+file = open("url Data.text", "w")
+file.write(r.text)
+file.close()
